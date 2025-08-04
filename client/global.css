@@ -98,14 +98,14 @@
     box-shadow: 0 0 0 1px hsl(var(--primary) / 0.1), 0 4px 20px hsl(var(--primary) / 0.1);
   }
   
-  /* Text effects */
+  /* Text effects - SLOWED DOWN */
   .text-gradient {
     background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--lime)) 50%, hsl(var(--cyan)) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     background-size: 200% 200%;
-    animation: gradient-shift 3s ease-in-out infinite;
+    animation: gradient-shift 8s ease-in-out infinite;
   }
   
   .text-glow {
@@ -141,7 +141,7 @@
   
   /* Layout components */
   .section-padding {
-    @apply py-24 lg:py-32;
+    @apply py-16 lg:py-20;
   }
   
   .container-custom {
@@ -233,7 +233,7 @@
   }
 }
 
-/* Keyframes */
+/* Keyframes - SLOWED DOWN GRADIENT */
 @keyframes gradient-shift {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
