@@ -158,7 +158,7 @@ const webServices = [
 
 // Updated tech stack
 const techStack = [
-  { name: "React", category: "Frontend", proficiency: 95, icon: "⚛️", description: "Modern UI library", experience: "5+ years" },
+  { name: "React", category: "Frontend", proficiency: 95, icon: "��️", description: "Modern UI library", experience: "5+ years" },
   { name: "Next.js", category: "Framework", proficiency: 90, icon: "▲", description: "Full-stack framework", experience: "4+ years" },
   { name: "TypeScript", category: "Language", proficiency: 88, icon: "📘", description: "Type-safe JavaScript", experience: "4+ years" },
   { name: "Tailwind CSS", category: "Styling", proficiency: 92, icon: "🎨", description: "Utility-first CSS", experience: "3+ years" },
@@ -450,7 +450,9 @@ export default function Index() {
     setSubmitStatus('idle');
 
     try {
+      console.log('Submitting form with data:', formData);
       const result = await submitContactForm(formData);
+      console.log('Form submission result:', result);
 
       if (result.success) {
         setSubmitStatus('success');
@@ -461,10 +463,16 @@ export default function Index() {
           console.log(result.message);
         }
       } else {
+        console.error('Form submission failed:', result.error);
         setSubmitStatus('error');
       }
     } catch (error) {
-      console.error('Form submission error:', error);
+      console.error('Form submission error details:', {
+        error: error,
+        message: error?.message,
+        name: error?.name,
+        stack: error?.stack
+      });
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
