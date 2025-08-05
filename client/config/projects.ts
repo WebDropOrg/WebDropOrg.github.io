@@ -8,15 +8,13 @@ export interface ProjectConfig {
   url: string;
   description: string;
   tech: string[];
-  metrics: {
-    visitors?: string;
-    performance?: string;
-    rating?: string;
-    timeline?: string;
-    [key: string]: string | undefined;
+  details: {
+    features: string[];
+    timeline: string;
+    industry: string;
+    scope: string;
   };
   color: string;
-  industry: string;
   features: string[];
   previewFeatures: {
     hasVideo: boolean;
@@ -29,178 +27,136 @@ export interface ProjectConfig {
 export const showcaseProjects: ProjectConfig[] = [
   {
     id: 1,
-    title: "EcoTech Solutions",
+    title: "Green Energy Solutions",
     category: "Business Website",
     url: "https://midday.ai/",
-    description:
-      "Professional business website with modern design and optimized performance for a technology company.",
+    description: "Professional business website for a renewable energy company featuring modern design and clean aesthetics.",
     tech: ["React", "Next.js", "Tailwind CSS", "Vercel"],
-    metrics: {
-      visitors: "8K+ monthly",
-      performance: "98/100",
-      rating: "4.8/5",
-      timeline: "4 days",
+    details: { 
+      features: ["Modern Design", "Mobile Responsive", "Contact Forms", "SEO Optimized"],
+      timeline: "4 days", 
+      industry: "Renewable Energy",
+      scope: "Complete Website Build"
     },
     color: "from-emerald-500 to-teal-500",
-    industry: "Technology",
-    features: [
-      "Responsive Design",
-      "SEO Optimized",
-      "Contact Forms",
-      "Fast Loading",
-    ],
+    features: ["Responsive Design", "SEO Optimized", "Contact Forms", "Fast Loading"],
     previewFeatures: {
       hasVideo: false,
       hasAnimations: true,
       hasInteractiveElements: true,
-      mobileOptimized: true,
-    },
+      mobileOptimized: true
+    }
   },
   {
     id: 2,
-    title: "Artisan Marketplace",
+    title: "Craft Marketplace",
     category: "E-Commerce Redesign",
     url: "https://react-storefront-kappa.vercel.app/",
-    description:
-      "Complete redesign of existing e-commerce platform with improved user experience and modern interface.",
+    description: "Complete redesign of existing marketplace with improved user experience and modern interface design.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe"],
-    metrics: {
-      visitors: "5.2K+ monthly",
-      performance: "95/100",
-      rating: "4.7/5",
-      timeline: "5 days",
+    details: { 
+      features: ["Modern UI", "Better Navigation", "Fast Checkout", "User Dashboard"],
+      timeline: "5 days", 
+      industry: "E-Commerce",
+      scope: "Website Redesign"
     },
     color: "from-blue-500 to-purple-500",
-    industry: "E-Commerce",
-    features: [
-      "Modern Design",
-      "Mobile Optimized",
-      "Fast Checkout",
-      "User Dashboard",
-    ],
+    features: ["Modern Design", "Mobile Optimized", "Fast Checkout", "User Dashboard"],
     previewFeatures: {
       hasVideo: false,
       hasAnimations: true,
       hasInteractiveElements: true,
-      mobileOptimized: true,
-    },
+      mobileOptimized: true
+    }
   },
   {
     id: 3,
-    title: "Creative Studio Hub",
+    title: "Design Studio Portfolio",
     category: "Portfolio Website",
     url: "https://bruno-simon.com/",
-    description:
-      "Creative portfolio website showcasing work with smooth animations and modern design.",
+    description: "Creative portfolio website showcasing design work with smooth animations and interactive elements.",
     tech: ["React", "GSAP", "Three.js", "Netlify"],
-    metrics: {
-      visitors: "3.1K+ monthly",
-      performance: "92/100",
-      rating: "4.9/5",
-      timeline: "3 days",
+    details: { 
+      features: ["Interactive Design", "Portfolio Gallery", "Smooth Animations", "Contact Forms"],
+      timeline: "3 days", 
+      industry: "Creative Agency",
+      scope: "Portfolio Development"
     },
     color: "from-pink-500 to-orange-500",
-    industry: "Design Agency",
-    features: [
-      "Interactive Elements",
-      "Portfolio Gallery",
-      "Smooth Animations",
-      "Contact Integration",
-    ],
+    features: ["Interactive Elements", "Portfolio Gallery", "Smooth Animations", "Contact Integration"],
     previewFeatures: {
       hasVideo: true,
       hasAnimations: true,
       hasInteractiveElements: true,
-      mobileOptimized: true,
-    },
+      mobileOptimized: true
+    }
   },
   {
     id: 4,
-    title: "HealthFirst Clinic",
-    category: "Medical Website",
+    title: "Medical Practice Hub",
+    category: "Healthcare Website",
     url: "https://vercel.com/",
-    description:
-      "Professional medical website with appointment booking and patient information system.",
+    description: "Professional medical website with appointment booking and patient information management system.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-    metrics: {
-      visitors: "2.8K+ monthly",
-      performance: "96/100",
-      rating: "4.6/5",
-      timeline: "4 days",
+    details: { 
+      features: ["Appointment System", "Patient Portal", "Secure Forms", "Mobile Friendly"],
+      timeline: "4 days", 
+      industry: "Healthcare",
+      scope: "Full Website Development"
     },
     color: "from-green-500 to-emerald-500",
-    industry: "Healthcare",
-    features: [
-      "Appointment System",
-      "Patient Portal",
-      "Secure Forms",
-      "Mobile Friendly",
-    ],
+    features: ["Appointment System", "Patient Portal", "Secure Forms", "Mobile Friendly"],
     previewFeatures: {
       hasVideo: false,
       hasAnimations: false,
       hasInteractiveElements: true,
-      mobileOptimized: true,
-    },
+      mobileOptimized: true
+    }
   },
   {
     id: 5,
-    title: "TechFlow Startup",
-    category: "Startup Website",
+    title: "Innovation Labs",
+    category: "Tech Startup",
     url: "https://www.figma.com/",
-    description:
-      "Modern startup website with product showcase and investor information sections.",
+    description: "Modern startup website with product showcase and company information for technology innovation.",
     tech: ["Next.js", "TypeScript", "Framer Motion", "Vercel"],
-    metrics: {
-      visitors: "4.5K+ monthly",
-      performance: "94/100",
-      rating: "4.8/5",
-      timeline: "5 days",
+    details: { 
+      features: ["Product Showcase", "Team Profiles", "Contact Forms", "Modern Design"],
+      timeline: "5 days", 
+      industry: "Technology",
+      scope: "Startup Website"
     },
     color: "from-purple-500 to-pink-500",
-    industry: "Technology",
-    features: [
-      "Product Showcase",
-      "Team Profiles",
-      "Contact Forms",
-      "Blog Integration",
-    ],
+    features: ["Product Showcase", "Team Profiles", "Contact Forms", "Blog Integration"],
     previewFeatures: {
       hasVideo: true,
       hasAnimations: true,
       hasInteractiveElements: true,
-      mobileOptimized: true,
-    },
+      mobileOptimized: true
+    }
   },
   {
     id: 6,
-    title: "FoodieDelight Restaurant",
+    title: "Local Bistro",
     category: "Restaurant Website",
     url: "https://tailwindcss.com/",
-    description:
-      "Restaurant website with menu showcase and location information for local business.",
+    description: "Restaurant website with menu showcase and location information for local dining establishment.",
     tech: ["React", "Tailwind CSS", "Next.js", "Vercel"],
-    metrics: {
-      visitors: "1.9K+ monthly",
-      performance: "97/100",
-      rating: "4.7/5",
-      timeline: "3 days",
+    details: { 
+      features: ["Menu Display", "Location Info", "Contact Forms", "Photo Gallery"],
+      timeline: "3 days", 
+      industry: "Restaurant",
+      scope: "Business Website"
     },
     color: "from-orange-500 to-red-500",
-    industry: "Restaurant",
-    features: [
-      "Menu Display",
-      "Location Info",
-      "Contact Forms",
-      "Photo Gallery",
-    ],
+    features: ["Menu Display", "Location Info", "Contact Forms", "Photo Gallery"],
     previewFeatures: {
       hasVideo: false,
       hasAnimations: true,
       hasInteractiveElements: true,
-      mobileOptimized: true,
-    },
-  },
+      mobileOptimized: true
+    }
+  }
 ];
 
 // Helper function to get all projects
@@ -210,15 +166,15 @@ export const getAllProjects = (): ProjectConfig[] => {
 
 // Helper function to get project by ID
 export const getProjectById = (id: number): ProjectConfig | undefined => {
-  return showcaseProjects.find((project) => project.id === id);
+  return showcaseProjects.find(project => project.id === id);
 };
 
 // Helper function to get projects by category
 export const getProjectsByCategory = (category: string): ProjectConfig[] => {
-  return showcaseProjects.filter((project) => project.category === category);
+  return showcaseProjects.filter(project => project.category === category);
 };
 
 // Helper function to get projects by industry
 export const getProjectsByIndustry = (industry: string): ProjectConfig[] => {
-  return showcaseProjects.filter((project) => project.industry === industry);
+  return showcaseProjects.filter(project => project.details.industry === industry);
 };
