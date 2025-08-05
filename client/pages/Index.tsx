@@ -448,13 +448,18 @@ export default function Index() {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
-    
+
     try {
       const result = await submitContactForm(formData);
-      
+
       if (result.success) {
         setSubmitStatus('success');
         setFormData({ name: "", email: "", website: "", message: "" });
+
+        // Show demo message if in demo mode
+        if (result.message) {
+          console.log(result.message);
+        }
       } else {
         setSubmitStatus('error');
       }
