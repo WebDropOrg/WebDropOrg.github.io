@@ -9,6 +9,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
+// Extend HTMLElement to include _reactRoot property
+declare global {
+  interface HTMLElement {
+    _reactRoot?: any;
+  }
+}
+
 const queryClient = new QueryClient();
 
 const App = () => (
