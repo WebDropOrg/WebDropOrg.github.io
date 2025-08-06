@@ -29,4 +29,19 @@ const App = () => (
   </QueryClientProvider>
 );
 
-createRoot(document.getElementById("root")!).render(<App />);
+// Safely initialize React root
+const container = document.getElementById("root");
+if (!container) {
+  throw new Error("Root element not found");
+}
+
+// Prevent duplicate root creation
+let root: any;
+if (!container._reactRoot) {
+  root = createRoot(container);
+  container._reactRoot = root;
+} else {
+  root = container._reactRoot;
+}
+
+root.render(<App />);
